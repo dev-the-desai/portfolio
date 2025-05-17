@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Desai | Systems Engineer & Compiler Developer</title>
+  <meta name="description" content="Dev Desai - Systems engineer specializing in compilers, computer architecture, and high-performance computing.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="site-logo">DEV DESAI</a>
+        <nav class="nav-menu">
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1 class="hero-heading">Systems engineering at the <span class="highlight">intersection of hardware and software.</span></h1>
+        <p class="hero-description fade-in-delay-1">I'm Dev — a systems engineer specializing in compilers, performance optimization, and computer architecture. My work focuses on creating efficient computing systems across the hardware-software boundary, with expertise in LLVM, concurrency, and high-performance computing.</p>
+        <a href="#contact" class="button fade-in-delay-2">Get in touch</a>
+      </div>
+    </div>
+    <!-- Background Pattern -->
+    <div class="hero-pattern">
+      <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Circuit board pattern -->
+          <pattern id="circuit" width="100" height="100" patternUnits="userSpaceOnUse">
+            <!-- Horizontal and vertical lines (like circuit traces) -->
+            <path d="M 0 20 L 100 20" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7"/>
+            <path d="M 0 50 L 100 50" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+            <path d="M 0 80 L 100 80" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7"/>
+            
+            <path d="M 20 0 L 20 100" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+            <path d="M 50 0 L 50 100" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7"/>
+            <path d="M 80 0 L 80 100" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+            
+            <!-- Connection junctions -->
+            <rect x="18" y="18" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            <rect x="48" y="18" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            <rect x="78" y="18" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            
+            <rect x="18" y="48" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            <rect x="48" y="48" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            <rect x="78" y="48" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            
+            <rect x="18" y="78" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            <rect x="48" y="78" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            <rect x="78" y="78" width="4" height="4" fill="currentColor" opacity="0.8"/>
+            
+            <!-- IC/Chip elements -->
+            <rect x="30" y="30" width="10" height="20" fill="none" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+            <rect x="60" y="60" width="10" height="20" fill="none" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+            <circle cx="35" cy="35" r="2" fill="currentColor" opacity="0.7"/>
+            <circle cx="35" cy="45" r="2" fill="currentColor" opacity="0.7"/>
+            <circle cx="65" cy="65" r="2" fill="currentColor" opacity="0.7"/>
+            <circle cx="65" cy="75" r="2" fill="currentColor" opacity="0.7"/>
+            
+            <!-- Diagonal connections -->
+            <path d="M 20 20 L 30 30" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+            <path d="M 50 50 L 60 60" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+            <path d="M 80 20 L 70 30" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+            <path d="M 80 80 L 70 80" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+            
+            <!-- Small capacitor symbols -->
+            <path d="M 10 50 L 10 45 M 10 55 L 10 50 M 5 45 L 15 45 M 5 55 L 15 55" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+            <path d="M 90 50 L 90 45 M 90 55 L 90 50 M 85 45 L 95 45 M 85 55 L 95 55" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#circuit)" />
+        
+        <!-- Static pulsing elements -->
+        <g opacity="0.8">
+          <circle cx="150" cy="150" r="3" fill="currentColor">
+            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="450" cy="250" r="3" fill="currentColor">
+            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="650" cy="450" r="3" fill="currentColor">
+            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="250" cy="550" r="3" fill="currentColor">
+            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="550" cy="150" r="3" fill="currentColor">
+            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="6s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="featured-header">
+        <h2 class="featured-heading">Featured Projects</h2>
+        <a href="#projects" class="view-all">View all projects <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="featured-grid">
+        <a href="project-llvm.html" class="featured-card">
+          <div class="featured-image">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#111111"/>
+              <line x1="0" y1="200" x2="350" y2="0" stroke="#0066ff" stroke-width="15"/>
+              <line x1="450" y1="450" x2="800" y2="250" stroke="#0066ff" stroke-width="15"/>
+              <line x1="400" y1="0" x2="400" y2="450" stroke="#ffffff" stroke-width="10"/>
+            </svg>
+          </div>
+          <div class="featured-content">
+            <h3 class="featured-title">LLVM-Based Matrix Language Compiler</h3>
+            <div class="featured-meta">
+              <span class="tag">Compiler Development</span>
+              <span>2024</span>
+            </div>
+            <p class="featured-description">Built a compiler for matrix-oriented C-like DSL targeting LLVM IR with optimizations including CSE, dead code elimination, instruction simplification, and load/store removal.</p>
+            <div class="featured-link">
+              View project details <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="featured-card">
+          <div class="featured-image">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#f5f5f5"/>
+              <g fill="#111111">
+                <rect x="50" y="0" width="60" height="450"/>
+                <rect x="150" y="0" width="40" height="450"/>
+                <rect x="230" y="0" width="30" height="450"/>
+                <rect x="290" y="0" width="20" height="450"/>
+                <rect x="340" y="0" width="10" height="450"/>
+                <rect x="450" y="0" width="10" height="450"/>
+                <rect x="500" y="0" width="20" height="450"/>
+                <rect x="560" y="0" width="30" height="450"/>
+                <rect x="630" y="0" width="40" height="450"/>
+                <rect x="710" y="0" width="60" height="450"/>
+              </g>
+            </svg>
+          </div>
+          <div class="featured-content">
+            <h3 class="featured-title">Lock-Free Concurrent Data Structures</h3>
+            <div class="featured-meta">
+              <span class="tag">Systems Programming</span>
+              <span>2024</span>
+            </div>
+            <p class="featured-description">Engineered a lock-free ring buffer with cache-line alignment and memory fences, achieving 25× speedup over mutex-based baselines. Designed MPMC queue using sequence counters to prevent ABA issues.</p>
+            <div class="featured-link">
+              View project details <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+   </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <div class="container">
+      <h2 class="section-heading">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-point"></div>
+          <div class="timeline-date">Aug 2024 - May 2026</div>
+          <h3 class="timeline-title">Master of Computer Engineering</h3>
+          <div class="timeline-company">North Carolina State University</div>
+          <p class="timeline-description">Focusing on advanced topics in computer architecture, compilers, and high-performance computing.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-point"></div>
+          <div class="timeline-date">Aug 2020 - May 2024</div>
+          <h3 class="timeline-title">B.Tech in Electronics and Communication Engineering</h3>
+          <div class="timeline-company">Pandit Deendayal Energy University</div>
+          <p class="timeline-description">GPA: 3.83/4.0</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Projects -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-heading">All Projects</h2>
+      <div class="project-grid">
+        <a href="project-llvm.html" class="project-card">
+          <div class="project-image-container">
+            <svg class="project-image" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#111111"/>
+              <line x1="0" y1="200" x2="350" y2="0" stroke="#0066ff" stroke-width="15"/>
+              <line x1="450" y1="450" x2="800" y2="250" stroke="#0066ff" stroke-width="15"/>
+              <line x1="400" y1="0" x2="400" y2="450" stroke="#ffffff" stroke-width="10"/>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">LLVM-Based Matrix Language Compiler</h3>
+            <p class="project-category">Compiler Development</p>
+            <p class="project-description">Built a compiler for matrix-oriented C-like DSL targeting LLVM IR with native matrix operations.</p>
+            <span class="view-project">View details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image-container">
+            <svg class="project-image" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#f5f5f5"/>
+              <g fill="#111111">
+                <rect x="50" y="0" width="60" height="450"/>
+                <rect x="150" y="0" width="40" height="450"/>
+                <rect x="230" y="0" width="30" height="450"/>
+                <rect x="290" y="0" width="20" height="450"/>
+                <rect x="340" y="0" width="10" height="450"/>
+                <rect x="450" y="0" width="10" height="450"/>
+                <rect x="500" y="0" width="20" height="450"/>
+                <rect x="560" y="0" width="30" height="450"/>
+                <rect x="630" y="0" width="40" height="450"/>
+                <rect x="710" y="0" width="60" height="450"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Lock-Free Concurrent Data Structures</h3>
+            <p class="project-category">Systems Programming</p>
+            <p class="project-description">Engineered a lock-free ring buffer with cache-line alignment and memory fences; achieved 25× speedup over mutex-based baselines.</p>
+            <span class="view-project">View details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image-container">
+            <svg class="project-image" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#111111"/>
+              <rect x="50" y="0" width="30" height="450" fill="#ffffff"/>
+              <rect x="120" y="0" width="10" height="450" fill="#ffffff"/>
+              <rect x="200" y="50" width="400" height="350" fill="#111111" stroke="none"/>
+              <circle cx="300" cy="200" r="30" fill="#0066ff"/>
+              <rect x="670" y="0" width="10" height="450" fill="#ffffff"/>
+              <rect x="720" y="0" width="30" height="450" fill="#ffffff"/>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">XINU OS Enhancements</h3>
+            <p class="project-category">Operating Systems</p>
+            <p class="project-description">Implemented fork() with memory sharing and paging optimizations. Developed atomic spinlocks with deadlock detection and priority inheritance.</p>
+            <span class="view-project">View details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image-container">
+            <svg class="project-image" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#f5f5f5"/>
+              <g fill="none" stroke="#0066ff" stroke-width="2">
+                <rect x="300" y="100" width="200" height="200" transform="rotate(45 400 200)"/>
+                <rect x="325" y="125" width="150" height="150" transform="rotate(45 400 200)"/>
+                <rect x="350" y="150" width="100" height="100" transform="rotate(45 400 200)"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Out-of-Order Superscalar Simulator</h3>
+            <p class="project-category">Computer Architecture</p>
+            <p class="project-description">Built a cycle-accurate simulator for out-of-order superscalar CPU with configurable issue/commit widths and multi-level cache hierarchy.</p>
+            <span class="view-project">View details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image-container">
+            <svg class="project-image" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#111111"/>
+              <g fill="none" stroke="#0066ff" stroke-width="3">
+                <path d="M200,225 L600,225 M400,50 L400,400" />
+                <path d="M200,100 Q400,50 600,100" stroke-dasharray="5,5" />
+                <path d="M200,350 Q400,400 600,350" stroke-dasharray="5,5" />
+                <circle cx="400" cy="225" r="20" stroke="none" fill="#0066ff" />
+              </g>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">RISC-V Core with CNN Accelerator</h3>
+            <p class="project-category">Hardware Design</p>
+            <p class="project-description">Designed 32-bit RISC-V core with custom ISA extensions and integrated CNN accelerator on FPGA. Achieved 13MHz throughput on 32×32 inputs.</p>
+            <span class="view-project">View details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-image-container">
+            <svg class="project-image" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#f5f5f5"/>
+              <g fill="none" stroke="#111111" stroke-width="2">
+                <rect x="100" y="100" width="600" height="250" rx="4" />
+                <line x1="100" y1="150" x2="700" y2="150" />
+                <rect x="120" y="170" width="560" height="160" rx="2" />
+                <rect x="150" y="200" width="200" height="100" rx="2" />
+                <rect x="450" y="200" width="200" height="100" rx="2" />
+                <circle cx="125" cy="125" r="10" stroke="none" fill="#0066ff" />
+              </g>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Transformer Attention Accelerator</h3>
+            <p class="project-category">Hardware Acceleration</p>
+            <p class="project-description">Designed pipelined hardware accelerator for Transformer attention with optimized SRAM hierarchy. Improved energy-delay product by 27%.</p>
+            <span class="view-project">View details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2 class="about-heading">About Me</h2>
+          <p class="about-subheading">Systems Engineer & Compiler Developer</p>
+          <p class="about-text">I'm a computer engineering Master's student at North Carolina State University with a focus on performance optimization across the hardware-software boundary. My expertise spans compiler development, CPU architecture, and low-level systems programming.</p>
+          <p class="about-text">My technical work includes building LLVM-based compilers, implementing lock-free data structures that achieve 25× speedup over mutex-based alternatives, designing cycle-accurate CPU simulators, and developing hardware accelerators for neural networks.</p>
+          <p class="about-text">I'm passionate about solving complex performance challenges through the integration of hardware and software optimizations, with particular interests in compiler technology, memory systems, and parallel computing.</p>
+          <div class="about-signature">Dev Desai</div>
+        </div>
+        <div class="about-image">
+          <!-- Placeholder for profile image -->
+          <svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; object-fit: cover;">
+            <rect width="100%" height="100%" fill="#f5f5f5"/>
+            <circle cx="250" cy="200" r="100" fill="#e0e0e0"/>
+            <rect x="150" y="300" width="200" height="200" rx="4" fill="#e0e0e0"/>
+            <text x="250" y="500" fill="#999" font-family="sans-serif" font-size="16" text-anchor="middle">Profile Photo</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-heading">Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-category-container">
+          <h3 class="skill-category">Languages & Systems</h3>
+          <ul class="skill-list">
+            <li class="skill-item">C/C++20</li>
+            <li class="skill-item">CUDA</li>
+            <li class="skill-item">Python</li>
+            <li class="skill-item">x86 Assembly</li>
+            <li class="skill-item">LLVM IR</li>
+          </ul>
+        </div>
+        <div class="skill-category-container">
+          <h3 class="skill-category">Compiler & Performance</h3>
+          <ul class="skill-list">
+            <li class="skill-item">LLVM Framework</li>
+            <li class="skill-item">Memory Hierarchy Optimization</li>
+            <li class="skill-item">SIMD Vectorization</li>
+            <li class="skill-item">Cache-Aware Algorithms</li>
+            <li class="skill-item">Performance Profiling</li>
+          </ul>
+        </div>
+        <div class="skill-category-container">
+          <h3 class="skill-category">Architecture</h3>
+          <ul class="skill-list">
+            <li class="skill-item">CPU/GPU/NPU Design</li>
+            <li class="skill-item">Out-of-Order Execution</li>
+            <li class="skill-item">Cache Systems</li>
+            <li class="skill-item">RISC-V</li>
+            <li class="skill-item">FPGA</li>
+          </ul>
+        </div>
+        <div class="skill-category-container">
+          <h3 class="skill-category">Systems Engineering</h3>
+          <ul class="skill-list">
+            <li class="skill-item">Lock-Free Programming</li>
+            <li class="skill-item">Concurrency</li>
+            <li class="skill-item">Memory Management</li>
+            <li class="skill-item">Virtual Memory</li>
+            <li class="skill-item">Thread Synchronization</li>
+          </ul>
+        </div>
+        <div class="skill-category-container">
+          <h3 class="skill-category">Parallel Computing</h3>
+          <ul class="skill-list">
+            <li class="skill-item">CUDA Programming</li>
+            <li class="skill-item">OpenMP</li>
+            <li class="skill-item">Parallel Algorithms</li>
+            <li class="skill-item">Memory Coalescing</li>
+            <li class="skill-item">Workload Balancing</li>
+          </ul>
+        </div>
+        <div class="skill-category-container">
+          <h3 class="skill-category">Hardware Design</h3>
+          <ul class="skill-list">
+            <li class="skill-item">Verilog/SystemVerilog</li>
+            <li class="skill-item">Vivado</li>
+            <li class="skill-item">Synopsys Tools</li>
+            <li class="skill-item">Hardware Accelerators</li>
+            <li class="skill-item">Neural Network Hardware</li>
+          </ul>
+        </div>
+        <div class="skill-category-container">
+          <h3 class="skill-category">Tools</h3>
+          <ul class="skill-list">
+            <li class="skill-item">Git</li>
+            <li class="skill-item">GDB</li>
+            <li class="skill-item">Valgrind</li>
+            <li class="skill-item">perf</li>
+            <li class="skill-item">CMake</li>
+          </ul>
+        </div>
+        <div class="skill-category-container">
+          <h3 class="skill-category">Domains</h3>
+          <ul class="skill-list">
+            <li class="skill-item">Operating Systems</li>
+            <li class="skill-item">Processor Design</li>
+            <li class="skill-item">Compilers</li>
+            <li class="skill-item">High-Performance Computing</li>
+            <li class="skill-item">Systems Programming</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2 class="section-heading">Professional Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-point"></div>
+          <div class="timeline-date">April 2023 - July 2023</div>
+          <h3 class="timeline-title">Digital Design Intern</h3>
+          <div class="timeline-company">eInfochips (An Arrow company)</div>
+          <p class="timeline-description">Implemented open-source digital design flow targeting performance and power-efficient microarchitecture. Built automated toolchain for design space exploration, reducing iteration time by 20%.</p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">HDL</span>
+            <span class="timeline-tag">Digital Design</span>
+            <span class="timeline-tag">Synthesis</span>
+            <span class="timeline-tag">Automation</span>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-content">
+          <h2 class="contact-heading">Get in Touch</h2>
+          <p class="contact-text">Interested in discussing potential projects or opportunities? Feel free to reach out through any of the channels below or send a message using the form.</p>
+          <div class="contact-links">
+            <div class="contact-link">
+              <div class="contact-link-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <a href="mailto:devdesai.contact@gmail.com">devdesai.contact@gmail.com</a>
+            </div>
+            <div class="contact-link">
+              <div class="contact-link-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <a href="https://github.com/dev-desai" target="_blank">github.com/dev-desai</a>
+            </div>
+            <div class="contact-link">
+              <div class="contact-link-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <a href="https://linkedin.com/in/dev-desai" target="_blank">linkedin.com/in/dev-desai</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-textarea" required></textarea>
+            </div>
+            <button type="submit" class="button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo">DEV DESAI</div>
+          <div class="footer-tagline">Systems Engineer & Compiler Developer</div>
+          <div class="footer-copyright">© 2025 Dev Desai. All rights reserved.</div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-nav">
+            <a href="#" class="footer-nav-link">Home</a>
+            <a href="#projects" class="footer-nav-link">Projects</a>
+            <a href="#about" class="footer-nav-link">About</a>
+            <a href="#skills" class="footer-nav-link">Skills</a>
+            <a href="#education" class="footer-nav-link">Education</a>
+            <a href="#experience" class="footer-nav-link">Experience</a>
+            <a href="#contact" class="footer-nav-link">Contact</a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/dev-desai" class="social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/dev-desai" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>

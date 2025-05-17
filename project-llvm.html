@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLVM Compiler | Dev Desai</title>
+  <meta name="description" content="LLVM Compiler for Matrix DSL - A compiler project by Dev Desai">
+  <link rel="stylesheet" href="css/style-guide.css">
+  <link rel="stylesheet" href="css/transitions.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Project page specific styles */
+    .project-hero {
+      padding: var(--space-xl) 0 var(--space-lg);
+      margin-top: var(--space-xl);
+      background-color: var(--color-background);
+    }
+    
+    .project-hero-content {
+      max-width: var(--content-width);
+      margin: 0 auto;
+    }
+    
+    .project-content {
+      padding: var(--space-lg) 0;
+      background-color: var(--color-background-alt);
+    }
+    
+    .project-image-full {
+      width: 100%;
+      margin: var(--space-lg) 0;
+      overflow: hidden;
+      background-color: #f0f0f0;
+      aspect-ratio: 16 / 9;
+    }
+    
+    .project-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .project-detail-item h4 {
+      font-size: var(--font-size-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-xs);
+      font-weight: 500;
+    }
+    
+    .project-detail-item p {
+      font-size: var(--font-size-base);
+      font-weight: 500;
+    }
+    
+    .project-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .project-section h3 {
+      font-size: var(--font-size-large);
+      margin-bottom: var(--space-md);
+      font-weight: 500;
+      letter-spacing: var(--letter-spacing-tight);
+    }
+    
+    .project-section p {
+      margin-bottom: var(--space-md);
+      font-size: var(--font-size-medium);
+      line-height: var(--line-height-relaxed);
+    }
+    
+    .next-prev-projects {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .next-project, .prev-project {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+    
+    .next-project:hover, .prev-project:hover {
+      transform: translateY(-2px);
+    }
+    
+    .next-prev-label {
+      font-size: var(--font-size-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .next-prev-title {
+      font-size: var(--font-size-medium);
+      font-weight: 500;
+      color: var(--color-text);
+    }
+    
+    /* Code block styling */
+    .code-block {
+      background-color: #f8f8f8;
+      border-radius: 4px;
+      padding: var(--space-md);
+      margin-bottom: var(--space-md);
+      overflow-x: auto;
+    }
+    
+    .code-block code {
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #333;
+    }
+    
+    /* Project-specific animations */
+    .project-hero-content {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition-delay: 0.3s;
+    }
+    
+    .project-hero-content.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .project-image-full {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition-delay: 0.5s;
+    }
+    
+    .project-image-full.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .project-details {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition-delay: 0.7s;
+    }
+    
+    .project-details.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+      .project-details {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .next-prev-projects {
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .project-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="site-logo">DEV DESAI</a>
+        <nav class="nav-menu">
+          <a href="index.html#projects" class="nav-link">Projects</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#skills" class="nav-link">Skills</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="project-hero-content">
+        <h1 class="hero-heading">LLVM Compiler for Matrix DSL</h1>
+        <p class="hero-description">A domain-specific language and compiler for high-performance matrix operations with custom IR lowering, SSA form optimization, and efficient backend code generation.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Project Content -->
+  <section class="project-content">
+    <div class="container">
+      <!-- Main Project Image -->
+      <div class="project-image-full">
+        <svg style="width:100%; height:100%;" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="100%" fill="#1A1A1A"/>
+          <line x1="0" y1="200" x2="350" y2="0" stroke="white" stroke-width="15"/>
+          <line x1="450" y1="450" x2="800" y2="250" stroke="white" stroke-width="15"/>
+          <line x1="400" y1="0" x2="400" y2="450" stroke="white" stroke-width="10"/>
+        </svg>
+      </div>
+      
+      <!-- Project Details -->
+      <div class="project-details">
+        <div class="project-detail-item">
+          <h4>Client</h4>
+          <p>Research Lab</p>
+        </div>
+        <div class="project-detail-item">
+          <h4>Timeline</h4>
+          <p>Jan 2023 - Jun 2023</p>
+        </div>
+        <div class="project-detail-item">
+          <h4>Role</h4>
+          <p>Lead Compiler Engineer</p>
+        </div>
+        <div class="project-detail-item">
+          <h4>Technologies</h4>
+          <p>C++, LLVM, Python</p>
+        </div>
+        <div class="project-detail-item">
+          <h4>Team Size</h4>
+          <p>4 engineers</p>
+        </div>
+        <div class="project-detail-item">
+          <h4>Links</h4>
+          <p><a href="#" target="_blank">GitHub Repo</a></p>
+        </div>
+      </div>
+      
+      <!-- Project Sections -->
+      <div class="content-area">
+        <div class="project-section animate-on-scroll">
+          <h3>Project Overview</h3>
+          <p>
+            This project involved the development of a specialized compiler for a matrix-focused domain-specific language (DSL). The goal was to create a high-performance computing framework that would allow researchers to express complex matrix operations in a natural syntax while generating highly optimized code for various target architectures.
+          </p>
+          <p>
+            The compiler leverages LLVM's infrastructure to provide robust optimization while adding custom passes specifically designed for matrix operations. The DSL supports common linear algebra operations, automatic parallelization, and hardware-specific optimizations for CPUs and accelerators.
+          </p>
+        </div>
+        
+        <div class="project-section animate-on-scroll">
+          <h3>Technical Approach</h3>
+          <p>
+            The compiler implementation followed a multi-stage pipeline:
+          </p>
+          <ol>
+            <li>Parsing the DSL input into an abstract syntax tree (AST)</li>
+            <li>Converting the AST to a custom matrix-aware IR</li>
+            <li>Applying domain-specific optimizations (fusion, tiling, etc.)</li>
+            <li>Lowering to LLVM IR for further optimization</li>
+            <li>Target-specific code generation</li>
+          </ol>
+          <p>
+            One of the key innovations was the design of a matrix-specific intermediate representation that preserved high-level semantic information about operations before lowering to more generic LLVM IR. This allowed for specialized optimizations like operator fusion and loop tiling that would be difficult to discover at the LLVM IR level.
+          </p>
+          <div class="code-block">
+            <code>
+// Example DSL code<br>
+matrix A(1000, 1000);<br>
+matrix B(1000, 1000);<br>
+matrix C(1000, 1000);<br>
+<br>
+// This will be optimized with fusion and tiling<br>
+C = (A * B) + (A.transpose() * B);
+            </code>
+          </div>
+        </div>
+        
+        <div class="project-section animate-on-scroll">
+          <h3>Challenges & Solutions</h3>
+          <p>
+            <strong>Challenge 1: Preserving High-Level Semantics</strong><br>
+            Conventional compilers lose semantic information early in the compilation process. We solved this by designing a custom IR that maintained matrix dimensions and properties throughout the optimization pipeline, enabling more effective transformations.
+          </p>
+          <p>
+            <strong>Challenge 2: Memory Access Patterns</strong><br>
+            Matrix operations have complex memory access patterns that can lead to cache inefficiencies. We implemented a specialized tile-based memory layout optimizer that analyzed data dependencies and restructured computations to maximize cache locality.
+          </p>
+          <p>
+            <strong>Challenge 3: Cross-Platform Performance</strong><br>
+            Different hardware architectures require different optimization strategies. Our solution was a target-specific backend that generated specialized code for each supported platform, including vectorization for CPUs and workgroup-based decomposition for accelerators.
+          </p>
+        </div>
+        
+        <div class="project-section animate-on-scroll">
+          <h3>Results & Impact</h3>
+          <p>
+            The compiler achieved significant performance improvements over general-purpose solutions:
+          </p>
+          <ul>
+            <li>40-60% faster execution compared to hand-optimized C++ with Eigen for large matrices</li>
+            <li>Memory usage reduced by up to 35% through elimination of temporary matrices</li>
+            <li>Compilation time improved by 25% compared to previous approaches</li>
+            <li>Successfully deployed in a production research environment for quantum chemistry simulations</li>
+          </ul>
+          <p>
+            The project has been adopted by three research groups for ongoing work in computational physics, demonstrating its effectiveness for real-world scientific computing applications.
+          </p>
+        </div>
+        
+        <div class="project-section animate-on-scroll">
+          <h3>Lessons Learned</h3>
+          <p>
+            This project reinforced the importance of domain-specific knowledge in compiler design. By understanding the mathematical properties of matrix operations, we were able to implement optimizations that wouldn't be possible in a general-purpose compiler.
+          </p>
+          <p>
+            We also learned that the balance between abstraction and performance is critical. While the DSL provided a clean interface for researchers, maintaining a clear mapping to efficient implementation required careful design decisions throughout the compilation pipeline.
+          </p>
+          <p>
+            If approaching a similar project again, I would invest more in the testing infrastructure earlier in the development process. Compiler correctness is challenging to verify, and having automated test generation for matrix operations would have accelerated development.
+          </p>
+        </div>
+        
+        <!-- Next/Previous Projects -->
+        <div class="next-prev-projects animate-on-scroll">
+          <a href="#" class="prev-project">
+            <span class="next-prev-label">Previous Project</span>
+            <span class="next-prev-title">Compute Framework</span>
+          </a>
+          <a href="#" class="next-project">
+            <span class="next-prev-label">Next Project</span>
+            <span class="next-prev-title">BFS on WSE-3</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-text">© 2025 Dev Desai. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/transitions.js"></script>
+  <script>
+    // Project-specific animations
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize animations after page loads
+      setTimeout(() => {
+        // Animate hero content
+        const projectHeroContent = document.querySelector('.project-hero-content');
+        if (projectHeroContent) {
+          projectHeroContent.classList.add('animate-in');
+        }
+        
+        // Animate project image
+        const projectImage = document.querySelector('.project-image-full');
+        if (projectImage) {
+          projectImage.classList.add('animate-in');
+        }
+        
+        // Animate project details
+        const projectDetails = document.querySelector('.project-details');
+        if (projectDetails) {
+          projectDetails.classList.add('animate-in');
+        }
+      }, 300);
+      
+      // Initialize scroll animations for project sections
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe project sections
+      document.querySelectorAll('.project-section').forEach(section => {
+        observer.observe(section);
+      });
+      
+      // Observe next/prev projects section
+      const nextPrevSection = document.querySelector('.next-prev-projects');
+      if (nextPrevSection) {
+        observer.observe(nextPrevSection);
+      }
+    });
+  </script>
+</body>
+</html>
